@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pulse Analytics helps businesses understand revenue, customers, and performance through clear analytics."
+    />
+
+    <title>Pulse Analytics | Understand Your Numbers</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a href="index.html" class="brand">
+          <span class="brand-icon" aria-hidden="true">⌁</span>
+          <span>Pulse Analytics</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="primary-navigation">
+          <a href="#product">Product</a>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="resources/index.html">Resources</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="login.html" class="sign-in-link" target="_blank" rel="noopener noreferrer">Sign in</a>
+          <a href="signup.html" class="button button-primary" target="_blank" rel="noopener noreferrer">
+            Get started free
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container" id="product">
+        <div class="hero-badge">
+          <span class="status-dot" aria-hidden="true"></span>
+          Business clarity, built in
+        </div>
+
+        <h1>
+          Understand your numbers.
+          <span>Grow your business.</span>
+        </h1>
+
+        <p class="hero-description">
+          Bring your revenue, customer activity, and business performance into
+          focus with one clear analytics dashboard.
+        </p>
+
+        <div class="hero-actions">
+          <a href="signup.html" class="button button-primary" target="_blank" rel="noopener noreferrer">
+            Get started free <span aria-hidden="true">→</span>
+          </a>
+
+          <a href="#dashboard" class="button button-secondary">
+            Explore dashboard
+          </a>
+        </div>
+
+        <div class="hero-benefits">
+          <span>✓ No credit card</span>
+          <span>✓ Sample data included</span>
+          <span>✓ Set up in minutes</span>
+        </div>
+      </section>
+
+      <section class="dashboard-section container" id="dashboard">
+        <div class="dashboard-app">
+          <!-- Dashboard sidebar -->
+          <aside class="dashboard-sidebar" aria-label="Dashboard navigation">
+            <a
+              href="#dashboard"
+              class="dashboard-brand"
+              aria-label="Pulse dashboard"
+            >
+              <span class="brand-icon">⌁</span>
+            </a>
+
+            <nav class="dashboard-nav">
+              <a
+                href="#overview"
+                class="dashboard-nav-link active"
+                data-view="Overview"
+                aria-current="page"
+              >
+                <span>▦</span><span class="sidebar-label">Overview</span>
+              </a>
+              <a href="#revenue" class="dashboard-nav-link" data-view="Revenue">
+                <span>↗</span><span class="sidebar-label">Revenue</span>
+              </a>
+              <a
+                href="#customers"
+                class="dashboard-nav-link"
+                data-view="Customers"
+              >
+                <span>♙</span><span class="sidebar-label">Customers</span>
+              </a>
+              <a
+                href="#acquisition"
+                class="dashboard-nav-link"
+                data-view="Acquisition"
+              >
+                <span>◎</span><span class="sidebar-label">Acquisition</span>
+              </a>
+              <a href="#reports" class="dashboard-nav-link" data-view="Reports">
+                <span>▤</span><span class="sidebar-label">Reports</span>
+              </a>
+              <a
+                href="#settings"
+                class="dashboard-nav-link"
+                data-view="Settings"
+              >
+                <span>⚙</span><span class="sidebar-label">Settings</span>
+              </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+              <span class="sidebar-avatar">AM</span>
+            </div>
+          </aside>
+
+          <!-- Main dashboard -->
+          <div class="dashboard-main" id="overview">
+            <div class="dashboard-topbar">
+              <div>
+                <p class="dashboard-breadcrumb">Dashboard / Overview</p>
+                <h2 class="dashboard-title" id="dashboard-heading">Overview</h2>
+              </div>
+
+              <div class="dashboard-topbar-actions">
+                <span class="sample-data-label">
+                  <span class="sample-data-dot"></span>
+                  Illustrative sample data
+                </span>
+
+                <button
+                  class="dashboard-avatar"
+                  type="button"
+                  aria-label="Sample account: Alex Morgan"
+                >
+                  AM
+                </button>
+              </div>
+            </div>
+
+            <!-- KPI cards -->
+            <div class="kpi-grid">
+              <article class="kpi-card">
+                <p class="kpi-label">Total Revenue</p>
+                <h3 class="kpi-value">$48,290</h3>
+                <p class="kpi-change positive">
+                  ↗ 12.4% <span>vs. last period</span>
+                </p>
+                <div
+                  class="kpi-sparkline sparkline-one"
+                  aria-hidden="true"
+                ></div>
+              </article>
+
+              <article class="kpi-card" id="customers">
+                <p class="kpi-label">Active Customers</p>
+                <h3 class="kpi-value">2,840</h3>
+                <p class="kpi-change positive">
+                  ↗ 8.2% <span>vs. last period</span>
+                </p>
+                <div
+                  class="kpi-sparkline sparkline-two"
+                  aria-hidden="true"
+                ></div>
+              </article>
+
+              <article class="kpi-card">
+                <p class="kpi-label">Conversion Rate</p>
+                <h3 class="kpi-value">3.68%</h3>
+                <p class="kpi-change positive">
+                  ↗ 0.6% <span>vs. last period</span>
+                </p>
+                <div
+                  class="kpi-sparkline sparkline-three"
+                  aria-hidden="true"
+                ></div>
+              </article>
+
+              <article class="kpi-card">
+                <p class="kpi-label">Avg. Order Value</p>
+                <h3 class="kpi-value">$84.20</h3>
+                <p class="kpi-change negative">
+                  ↘ 1.4% <span>vs. last period</span>
+                </p>
+                <div
+                  class="kpi-sparkline sparkline-four"
+                  aria-hidden="true"
+                ></div>
+              </article>
+            </div>
+
+            <!-- Charts -->
+            <div class="dashboard-chart-grid">
+              <article class="dashboard-panel revenue-panel" id="revenue">
+                <div class="panel-header">
+                  <div>
+                    <h3>Revenue over time</h3>
+                    <p>Monitor your revenue performance</p>
+                  </div>
+
+                  <div class="chart-periods" aria-label="Revenue chart period">
+                    <button type="button" data-period="daily">Daily</button>
+                    <button
+                      type="button"
+                      data-period="weekly"
+                      class="selected"
+                      aria-pressed="true"
+                    >
+                      Weekly
+                    </button>
+                    <button
+                      type="button"
+                      data-period="monthly"
+                      aria-pressed="false"
+                    >
+                      Monthly
+                    </button>
+                  </div>
+                </div>
+
+                <div class="revenue-chart-wrap">
+                  <div class="chart-y-labels" aria-hidden="true">
+                    <span>$15k</span>
+                    <span>$10k</span>
+                    <span>$5k</span>
+                    <span>$0</span>
+                  </div>
+
+                  <div class="revenue-chart">
+                    <svg
+                      id="revenue-chart"
+                      viewBox="0 0 600 230"
+                      role="img"
+                      aria-label="Illustrative revenue line chart for the selected period"
+                      preserveAspectRatio="none"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="revenue-fill"
+                          x1="0"
+                          y1="0"
+                          x2="0"
+                          y2="1"
+                        >
+                          <stop
+                            offset="0%"
+                            stop-color="#4f46e5"
+                            stop-opacity="0.22"
+                          />
+                          <stop
+                            offset="100%"
+                            stop-color="#4f46e5"
+                            stop-opacity="0.01"
+                          />
+                        </linearGradient>
+                      </defs>
+
+                      <g class="chart-grid-lines">
+                        <line x1="0" y1="20" x2="600" y2="20" />
+                        <line x1="0" y1="80" x2="600" y2="80" />
+                        <line x1="0" y1="140" x2="600" y2="140" />
+                        <line x1="0" y1="200" x2="600" y2="200" />
+                      </g>
+
+                      <path
+                        id="revenue-area"
+                        d="M0,165 C40,155 45,120 90,135 S145,165 195,110 S260,145 315,120 S370,65 420,90 S480,55 520,65 S570,35 600,40 L600,200 L0,200 Z"
+                        fill="url(#revenue-fill)"
+                      />
+
+                      <path
+                        id="revenue-line"
+                        d="M0,165 C40,155 45,120 90,135 S145,165 195,110 S260,145 315,120 S370,65 420,90 S480,55 520,65 S570,35 600,40"
+                        fill="none"
+                        stroke="#4f46e5"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+
+                      <circle
+                        id="revenue-point"
+                        cx="600"
+                        cy="40"
+                        r="5"
+                        fill="#ffffff"
+                        stroke="#4f46e5"
+                        stroke-width="3"
+                      />
+                    </svg>
+
+                    <div class="chart-tooltip" id="chart-tooltip">
+                      <strong>$12,480</strong>
+                      <span>Sample revenue</span>
+                    </div>
+                  </div>
+
+                  <div class="chart-x-labels" id="chart-x-labels">
+                    <span>Apr 1</span>
+                    <span>Apr 7</span>
+                    <span>Apr 14</span>
+                    <span>Apr 21</span>
+                    <span>Apr 28</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="dashboard-panel channel-panel" id="acquisition">
+                <div class="panel-header">
+                  <div>
+                    <h3>Revenue by channel</h3>
+                    <p>Share of total revenue</p>
+                  </div>
+                </div>
+
+                <div class="channel-list">
+                  <div class="channel-item">
+                    <div class="channel-info">
+                      <span>Organic search</span>
+                      <strong>$18.2k</strong>
+                    </div>
+                    <div class="channel-track">
+                      <span style="width: 86%"></span>
+                    </div>
+                  </div>
+
+                  <div class="channel-item">
+                    <div class="channel-info">
+                      <span>Paid advertising</span>
+                      <strong>$12.4k</strong>
+                    </div>
+                    <div class="channel-track">
+                      <span style="width: 62%"></span>
+                    </div>
+                  </div>
+
+                  <div class="channel-item">
+                    <div class="channel-info">
+                      <span>Social media</span>
+                      <strong>$8.6k</strong>
+                    </div>
+                    <div class="channel-track">
+                      <span style="width: 44%"></span>
+                    </div>
+                  </div>
+
+                  <div class="channel-item">
+                    <div class="channel-info">
+                      <span>Direct traffic</span>
+                      <strong>$5.7k</strong>
+                    </div>
+                    <div class="channel-track">
+                      <span style="width: 31%"></span>
+                    </div>
+                  </div>
+
+                  <div class="channel-item">
+                    <div class="channel-info">
+                      <span>Email campaigns</span>
+                      <strong>$3.4k</strong>
+                    </div>
+                    <div class="channel-track">
+                      <span style="width: 19%"></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Recent activity -->
+              <article class="dashboard-panel activity-panel" id="reports">
+                <div class="panel-header">
+                  <div>
+                    <h3>Recent activity</h3>
+                    <p>Latest events in your workspace</p>
+                  </div>
+                  <button
+                    type="button"
+                    class="panel-text-button"
+                    id="view-activity"
+                  >
+                    View all
+                  </button>
+                </div>
+
+                <div class="activity-list">
+                  <div class="activity-item">
+                    <span class="activity-icon activity-green">↗</span>
+                    <div class="activity-copy">
+                      <strong>Revenue milestone reached</strong>
+                      <span>Revenue passed $45,000</span>
+                    </div>
+                    <time>2m ago</time>
+                  </div>
+
+                  <div class="activity-item">
+                    <span class="activity-icon activity-purple">♙</span>
+                    <div class="activity-copy">
+                      <strong>Customer growth</strong>
+                      <span>120 new active customers</span>
+                    </div>
+                    <time>1h ago</time>
+                  </div>
+
+                  <div class="activity-item">
+                    <span class="activity-icon activity-blue">▤</span>
+                    <div class="activity-copy">
+                      <strong>Weekly report prepared</strong>
+                      <span>Performance summary updated</span>
+                    </div>
+                    <time>3h ago</time>
+                  </div>
+                </div>
+
+                <p
+                  class="activity-feedback"
+                  id="activity-feedback"
+                  aria-live="polite"
+                ></p>
+              </article>
+
+              <!-- Top categories -->
+              <article class="dashboard-panel categories-panel">
+                <div class="panel-header">
+                  <div>
+                    <h3>Top categories</h3>
+                    <p>Revenue by product category</p>
+                  </div>
+                </div>
+
+                <div class="category-list">
+                  <div class="category-item">
+                    <span class="category-color category-indigo"></span>
+                    <span class="category-name">Electronics</span>
+                    <strong>$16,840</strong>
+                  </div>
+
+                  <div class="category-item">
+                    <span class="category-color category-violet"></span>
+                    <span class="category-name">Apparel</span>
+                    <strong>$12,450</strong>
+                  </div>
+
+                  <div class="category-item">
+                    <span class="category-color category-blue"></span>
+                    <span class="category-name">Home & living</span>
+                    <strong>$10,200</strong>
+                  </div>
+
+                  <div class="category-item">
+                    <span class="category-color category-slate"></span>
+                    <span class="category-name">Accessories</span>
+                    <strong>$8,800</strong>
+                  </div>
+                </div>
+
+                <div class="category-total">
+                  <span>Total sample revenue</span>
+                  <strong>$48,290</strong>
+                </div>
+              </article>
+            </div>
+
+            <div class="dashboard-footer-note">
+              <span class="sample-data-dot"></span>
+              This dashboard uses illustrative sample data for demonstration.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section container" id="features">
+        <p class="section-eyebrow">FEATURES</p>
+        <h2>Everything you need to see the bigger picture.</h2>
+        <p class="section-description">
+          Understand the metrics that matter to your business.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Revenue Tracking</h3>
+            <p>See how your revenue changes over time.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Customer Insights</h3>
+            <p>Understand customer activity and engagement.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Conversion Analytics</h3>
+            <p>Explore how visitors become customers.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Channel Performance</h3>
+            <p>Compare the channels bringing people to your business.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Custom Reports</h3>
+            <p>Organise important metrics into useful reports.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Clear Visualisations</h3>
+            <p>Make complex information easier to understand.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="how-section container" id="how-it-works">
+        <p class="section-eyebrow">HOW IT WORKS</p>
+        <h2>Turn business data into clearer decisions.</h2>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <h3>Bring your data together</h3>
+            <p>Start with the business metrics that matter most.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <h3>Understand performance</h3>
+            <p>Review trends and compare key indicators.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <h3>Make better decisions</h3>
+            <p>Use clearer information to guide your next steps.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing-section container" id="pricing">
+        <p class="section-eyebrow">PRICING</p>
+        <h2>Start small. Grow with confidence.</h2>
+        <p class="section-description">
+          Illustrative plans for this website prototype.
+        </p>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3>Starter</h3>
+            <p class="price">$0 <span>/ month</span></p>
+            <p>Explore the essential metrics.</p>
+            <a href="signup.html" class="button button-secondary" target="_blank" rel="noopener noreferrer">
+              Get started
+            </a>
+          </article>
+
+          <article class="pricing-card pricing-card-featured">
+            <p class="plan-label">POPULAR</p>
+            <h3>Growth</h3>
+            <p class="price">$29 <span>/ month</span></p>
+            <p>Explore expanded analytics and reports.</p>
+            <a href="signup.html" class="button button-primary" target="_blank" rel="noopener noreferrer">
+              Choose Growth
+            </a>
+          </article>
+
+          <article class="pricing-card">
+            <h3>Scale</h3>
+            <p class="price">$79 <span>/ month</span></p>
+            <p>Explore more advanced reporting concepts.</p>
+            <a href="signup.html" class="button button-secondary" target="_blank" rel="noopener noreferrer">
+              Choose Scale
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta container">
+        <h2>Make your next business decision a smarter one.</h2>
+        <p>Bring your key metrics into focus.</p>
+        <a href="signup.html" class="button button-primary" target="_blank" rel="noopener noreferrer">
+          Get started free
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a href="index.html" class="brand">
+          <span class="brand-icon" aria-hidden="true">⌁</span>
+          <span>Pulse Analytics</span>
+        </a>
+
+        <p>Clearer insights. Smarter decisions.</p>
+
+        <div class="footer-links">
+          <a href="resources/index.html">Resources</a>
+          <a href="login.html" target="_blank" rel="noopener noreferrer">Sign in</a>
+          <a href="signup.html" target="_blank" rel="noopener noreferrer">Get started</a>
+        </div>
+
+        <p class="copyright">
+          © <span id="current-year"></span> Pulse Analytics. Prototype for
+          demonstration purposes.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Log in to your Pulse Analytics account."
+    />
+
+    <title>Log In | Pulse Analytics</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f8fafc;
+        color: #172033;
+      }
+
+      .auth-page {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      /* Left promotional panel */
+
+      .auth-visual {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 48px;
+        color: white;
+        background:
+          radial-gradient(
+            circle at 85% 20%,
+            rgba(129, 140, 248, 0.55),
+            transparent 35%
+          ),
+          linear-gradient(145deg, #171554, #4338ca 65%, #6366f1);
+      }
+
+      .auth-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: inherit;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .auth-brand-icon {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.16);
+        font-size: 25px;
+      }
+
+      .auth-visual-content {
+        max-width: 470px;
+        margin: 70px 0;
+      }
+
+      .auth-visual-content h1 {
+        margin: 0 0 20px;
+        font-size: clamp(36px, 4vw, 54px);
+        line-height: 1.12;
+        letter-spacing: -1.8px;
+      }
+
+      .auth-visual-content p {
+        color: #e0e7ff;
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .auth-benefits {
+        display: grid;
+        gap: 18px;
+        margin-top: 35px;
+      }
+
+      .auth-benefit {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #eef2ff;
+      }
+
+      .benefit-check {
+        display: grid;
+        place-items: center;
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.16);
+      }
+
+      .auth-visual-footer {
+        color: #c7d2fe;
+        font-size: 13px;
+      }
+
+      /* Login form */
+
+      .auth-form-side {
+        display: grid;
+        place-items: center;
+        padding: 48px 24px;
+      }
+
+      .auth-form-container {
+        width: 100%;
+        max-width: 420px;
+      }
+
+      .mobile-brand {
+        display: none;
+        margin-bottom: 36px;
+        color: #312e81;
+      }
+
+      .auth-heading {
+        margin-bottom: 30px;
+      }
+
+      .auth-heading h2 {
+        margin: 0 0 10px;
+        font-size: 32px;
+        letter-spacing: -1px;
+      }
+
+      .auth-heading p {
+        margin: 0;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      .auth-form {
+        display: grid;
+        gap: 20px;
+      }
+
+      .form-field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .form-field label {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .form-field input {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 14px;
+        border: 1px solid #dbe2ea;
+        border-radius: 9px;
+        outline: none;
+        background: white;
+        color: #172033;
+        font: inherit;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .form-field input:focus {
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.13);
+      }
+
+      .password-wrapper {
+        position: relative;
+      }
+
+      .password-wrapper input {
+        padding-right: 72px;
+      }
+
+      .password-toggle {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        border: 0;
+        background: transparent;
+        color: #4f46e5;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .form-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+      }
+
+      .remember-option {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #64748b;
+      }
+
+      .remember-option input {
+        accent-color: #4f46e5;
+      }
+
+      .auth-link {
+        color: #4f46e5;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .auth-link:hover {
+        text-decoration: underline;
+      }
+
+      .auth-submit {
+        width: 100%;
+        min-height: 49px;
+        border: 0;
+        border-radius: 9px;
+        background: #4f46e5;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+      }
+
+      .auth-submit:hover {
+        background: #4338ca;
+        transform: translateY(-1px);
+      }
+
+      .auth-submit:focus-visible,
+      .password-toggle:focus-visible {
+        outline: 3px solid #a5b4fc;
+        outline-offset: 3px;
+      }
+
+      .auth-divider {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 28px 0;
+        color: #94a3b8;
+        font-size: 12px;
+      }
+
+      .auth-divider::before,
+      .auth-divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #e2e8f0;
+      }
+
+      .auth-switch {
+        color: #64748b;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .auth-switch a {
+        margin-left: 4px;
+      }
+
+      .auth-back-link {
+        display: inline-block;
+        margin-top: 26px;
+        color: #4f46e5;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .form-message {
+        margin: 0;
+        color: #b91c1c;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .form-message:empty {
+        display: none;
+      }
+
+      /* Responsive layout */
+
+      @media (max-width: 850px) {
+        .auth-page {
+          grid-template-columns: 1fr;
+        }
+
+        .auth-visual {
+          display: none;
+        }
+
+        .auth-form-side {
+          padding: 40px 24px;
+        }
+
+        .auth-form-container {
+          max-width: 460px;
+        }
+
+        .mobile-brand {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 21px;
+          font-weight: 700;
+          text-decoration: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .auth-form-side {
+          padding: 28px 20px;
+        }
+
+        .auth-heading h2 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="auth-page">
+      <!-- Left panel -->
+      <aside class="auth-visual">
+        <a href="index.html" class="auth-brand">
+          <span class="auth-brand-icon">⌁</span>
+          <span>Pulse Analytics</span>
+        </a>
+
+        <div class="auth-visual-content">
+          <h1>Your business insights, all in one place.</h1>
+
+          <p>
+            Welcome back. Sign in to explore your metrics, monitor performance,
+            and make more informed business decisions.
+          </p>
+
+          <div class="auth-benefits">
+            <div class="auth-benefit">
+              <span class="benefit-check">✓</span>
+              <span>Monitor your business performance</span>
+            </div>
+
+            <div class="auth-benefit">
+              <span class="benefit-check">✓</span>
+              <span>Understand customer activity</span>
+            </div>
+
+            <div class="auth-benefit">
+              <span class="benefit-check">✓</span>
+              <span>Keep track of important metrics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-visual-footer">
+          © <span id="current-year"></span> Pulse Analytics
+        </div>
+      </aside>
+
+      <!-- Login form -->
+      <section class="auth-form-side">
+        <div class="auth-form-container">
+          <a href="index.html" class="auth-brand mobile-brand">
+            <span class="auth-brand-icon">⌁</span>
+            <span>Pulse Analytics</span>
+          </a>
+
+          <header class="auth-heading">
+            <h2>Welcome back</h2>
+            <p>Enter your details to access your account.</p>
+          </header>
+
+          <form class="auth-form" id="login-form">
+            <div class="form-field">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="alex@company.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="password">Password</label>
+
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="toggle-password"
+                  aria-controls="password"
+                  aria-pressed="false"
+                >
+                  Show
+                </button>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label class="remember-option">
+                <input type="checkbox" name="remember" />
+                Remember me
+              </label>
+
+              <a href="#" class="auth-link" id="forgot-password">
+                Forgot password?
+              </a>
+            </div>
+
+            <p
+              class="form-message"
+              id="form-message"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+            <button type="submit" class="auth-submit">Log in</button>
+          </form>
+
+          <div class="auth-divider">OR</div>
+
+          <p class="auth-switch">
+            Don't have an account?
+            <a href="signup.html" class="auth-link" target="_blank" rel="noopener noreferrer">Create an account</a>
+          </p>
+
+          <a href="index.html" class="auth-back-link">
+            ← Back to homepage
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const loginForm = document.querySelector("#login-form");
+      const passwordInput = document.querySelector("#password");
+      const togglePassword = document.querySelector("#toggle-password");
+      const formMessage = document.querySelector("#form-message");
+      const forgotPassword = document.querySelector("#forgot-password");
+
+      document.querySelector("#current-year").textContent =
+        new Date().getFullYear();
+
+      // Show or hide password
+      togglePassword.addEventListener("click", () => {
+        const isPassword = passwordInput.type === "password";
+
+        passwordInput.type = isPassword ? "text" : "password";
+        togglePassword.textContent = isPassword ? "Hide" : "Show";
+        togglePassword.setAttribute("aria-pressed", String(isPassword));
+      });
+
+      // Front-end login form validation
+      loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        formMessage.style.color = "#92400e";
+
+        if (!loginForm.checkValidity()) {
+          loginForm.reportValidity();
+          return;
+        }
+
+        formMessage.textContent =
+          "The form is valid, but login is not connected yet. Connect an authentication service to sign in securely.";
+      });
+
+      // Password recovery placeholder
+      forgotPassword.addEventListener("click", (event) => {
+        event.preventDefault();
+        formMessage.style.color = "#92400e";
+        formMessage.textContent =
+          "Password recovery is not configured yet. A recovery page and authentication service are needed.";
+      });
+    </script>
+  </body>
+</html>
